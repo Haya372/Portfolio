@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const loader = require('sass-loader');
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -27,6 +28,7 @@ module.exports = {
   output: {
     filename: '[name]-[chunkhash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
     publicPath: '/'
   },
   devtool: 'source-map',
@@ -40,6 +42,24 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.(css|sass|scss)/,
+        use: [
+          'style-loader',
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            /* // Requires >= sass-loader@^8.0.0
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                indentedSyntax: true // optional
+              },
+            },*/
+          },
+        ],
       }
     ]
   },
@@ -64,6 +84,12 @@ module.exports = {
           reuseExistingChunk: true,
         },
       },
+    },
+  },
+  resolve: {
+    extensions: [".js", ".vue"],
+    alias: {
+      vue$: "vue/dist/vue.esm.js",
     },
   },
   plugins: plugins
