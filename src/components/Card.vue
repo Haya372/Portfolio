@@ -5,6 +5,36 @@
       :src="src"
       contain
     />
+    <v-card-title>{{this.title}}</v-card-title>
+    <v-card-text>
+      <div class="subtitle">{{sub_title}}</div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="primary"
+      >
+        description
+      </v-btn>
+      <v-btn
+        text
+        color="primary"
+        :href="repo ? repo : null"
+        :depressed="!repo"
+        :disabled="!repo"
+      >
+        Repository
+      </v-btn>
+      <v-btn
+        text
+        color="primary"
+        :href="link ? link : null"
+        :depressed="!link"
+        :disabled="!link"
+      >
+        Product
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 <script>
@@ -16,9 +46,11 @@ export default {
     },
     title: {
       type: String,
+      default: "No Title"
     },
     sub_title: {
       type: String,
+      default: `This is subtitle`
     },
     repo: {
       type: String,
@@ -34,3 +66,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <v-app>
     <h1>This is Index page</h1>
     <Card />
-  </div>
+  </v-app>
 </template>
 
 <script>
