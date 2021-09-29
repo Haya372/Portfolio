@@ -1,24 +1,24 @@
 <template>
-  <div class="wrapper">
-    <v-app>
+  <v-app>
+    <Header />
+    <div class="wrapper">
       <router-view />
-    </v-app>
-  </div>
+    </div>
+  </v-app>
 </template>
 
 <script>
+import Header from './components/Header';
+
 export default {
   name: "App",
-  data() {
-    return {
-      message: 'hello'
-    };
-  }
+  components: { Header },
 }
 </script>
 
 <style scoped>
 .wrapper {
-  margin: 0 16px;
+  margin: 16px 16px 0;
+  flex-grow: 1;
 }
 </style>
