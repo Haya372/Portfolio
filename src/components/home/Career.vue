@@ -8,10 +8,10 @@
         :icon="item.icon"
       >
         <v-row>
-          <v-col>
+          <v-col xs="6" sm="4" md="2">
             <div>{{item.year}}</div>
           </v-col>
-          <v-col>
+          <v-col xs="6" sm="8" md="10">
             <div>{{item.title}}</div>
           </v-col>
         </v-row>
