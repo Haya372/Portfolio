@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="text-h5 text-sm-h4 mb-4 text-center font-weight-bold">CAREER</div>
+  <v-container>
+    <div class="text-h5 text-sm-h4 mb-4 text-center font-weight-bold mt-4">CAREER</div>
     <v-timeline dense>
       <v-timeline-item
         v-for="(item, idx) in careers"
@@ -17,7 +17,7 @@
         </v-row>
       </v-timeline-item>
     </v-timeline>
-  </div>
+  </v-container>
 </template>
 
 <script>
