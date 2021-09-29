@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <h1>Hello World!!</h1>
-    <p>{{message}}</p>
-    <router-view />
+    <v-app>
+      <router-view />
+    </v-app>
   </div>
 </template>
 

@@ -1,14 +1,15 @@
 <template>
-  <v-app>
-    <h1>This is Index page</h1>
+  <div>
+    <Career />
     <ProductLayout />
-  </v-app>
+  </div>
 </template>
 
 <script>
 import ProductLayout from '../components/home/ProductLayout';
+import Career from '../components/home/Career';
 export default {
   name: "Home",
-  components: { ProductLayout }
+  components: { ProductLayout, Career }
 }
 </script>
