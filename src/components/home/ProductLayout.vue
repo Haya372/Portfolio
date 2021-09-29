@@ -5,10 +5,10 @@
       <v-col
         v-for="key in Object.keys(products)"
         :key="key"
-        xs="12"
-        sm="6"
-        md="4"
-        lg="3"
+        cols="6"
+        sm="4"
+        md="3"
+        lg="2"
       >
         <Card
           :title="products[key].title"

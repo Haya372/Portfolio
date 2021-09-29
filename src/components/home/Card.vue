@@ -4,17 +4,13 @@
       :src="src"
       contain
     />
-    <v-card-title>{{this.title}}</v-card-title>
+    <v-card-title>
+      <div class="subtitle">{{this.title}}</div>
+    </v-card-title>
     <v-card-text>
       <div class="subtitle">{{sub_title}}</div>
     </v-card-text>
-    <v-card-actions>
-      <v-btn
-        text
-        color="primary"
-      >
-        Detail
-      </v-btn>
+    <v-card-actions class="btn-overflow">
       <v-btn
         text
         color="primary"
@@ -71,5 +67,9 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.btn-overflow {
+  overflow: scroll;
 }
 </style>
