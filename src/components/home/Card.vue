@@ -1,7 +1,6 @@
 <template>
   <v-card>
     <v-img
-      height="256"
       :src="src"
       contain
     />
@@ -14,7 +13,7 @@
         text
         color="primary"
       >
-        description
+        Detail
       </v-btn>
       <v-btn
         text

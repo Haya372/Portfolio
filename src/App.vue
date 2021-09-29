@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h1>Hello World!!</h1>
     <p>{{message}}</p>
     <router-view />
@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.wrapper {
+  margin: 0 16px;
+}
+</style>
