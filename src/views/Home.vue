@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h1>This is Index page</h1>
+    <Profile />
+    <Career />
+    <ProductLayout />
   </div>
 </template>
 
 <script>
+import ProductLayout from '../components/home/ProductLayout';
+import Career from '../components/home/Career';
+import Profile from '../components/home/Profile';
 export default {
-  name: "Home"
+  name: "Home",
+  components: { ProductLayout, Career, Profile }
 }
 </script>

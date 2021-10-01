@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const loader = require('sass-loader');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -21,6 +21,15 @@ const plugins = [
     filename: "styles.css",
     chunkFilename: "[name]-[chunkhash].css"
   }),
+  new CopyPlugin({
+    patterns: [
+      {
+        from: "*",
+        to: path.resolve(__dirname, 'dist', 'assets'),
+        context: "src/assets"
+      },
+    ],
+  })
 ];
 
 module.exports = {
