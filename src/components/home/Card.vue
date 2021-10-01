@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card min-width="200px">
     <v-img
       :src="src"
       contain

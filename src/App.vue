@@ -18,7 +18,9 @@ export default {
 
 <style scoped>
 .wrapper {
-  margin: 16px 16px 0;
+  margin: 16px auto;
   flex-grow: 1;
+  text-align: center;
+  max-width: 820px;
 }
 </style>

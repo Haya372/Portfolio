@@ -7,8 +7,6 @@
         :key="key"
         cols="6"
         sm="4"
-        md="3"
-        lg="2"
       >
         <Card
           :title="products[key].title"
