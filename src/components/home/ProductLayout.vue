@@ -13,6 +13,7 @@
           :sub_title="products[key].sub_title"
           :repo="products[key].repo"
           :link="products[key].link"
+          :image_url="products[key].image_url"
         />
       </v-col>
     </v-row>

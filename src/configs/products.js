@@ -18,5 +18,11 @@ export default {
     title: '簡単経路くん',
     sub_title: 'NYLE HACKATHON IN TSUKUBA 2021にて開発',
     repo: 'https://github.com/toshikingggg/MobilityApp'
+  },
+  'SmartFund': {
+    title: 'スマート募金',
+    sub_title: 'JPHACKS 2021にて開発',
+    repo: 'https://github.com/jphacks/C_2105',
+    image_url: '/assets/logo-smartbokin.png'
   }
 }
